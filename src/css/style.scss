@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+
+  .logo {
+    width: auto;
+    img {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  nav{
+    overflow-y: auto; /* Добавляем вертикальную прокрутку при необходимости */
+    border: 1px solid #ccc; /* Добавляем рамку для отделения навигационной секции */
+    padding: 10px; 
+    height: 800px;
+    
+  }
+  .nav_section {
+    border-top: 2px solid grey;
+    .title {
+      padding: 10px;
+      box-sizing: border-box;
+      line-height: 48px;
+      list-style: none;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      font-size: 0.875rem;
+      padding-left: 16px;
+      padding-right: 16px;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+      background-color: rgb(255, 255, 255);
+      
+      h1 {
+        box-sizing: border-box;
+        line-height: 48px;
+        list-style: none;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: rgb(255, 255, 255);
+    
+      }
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        list-style: none;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        padding: 10px;
+        align-items: center;
+        img {
+          width: 15%;
+          color: rgba(0, 0, 0, 0.54);
+          flex-shrink: 0;
+          display: inline-flex;
+        }
+      }
+      :hover {
+        background-color: #cfcfcf;
+      }
+    }
+  }
+  //header
+  div{
+    width: 100%;
+    header {
+        position: fixed; 
+        top: 0;
+        max-width: 1110px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #1976D2;
+        padding: 20px;
+        z-index: 1000;
+        .dark-mode{
+          display: flex;
+          width: 10%;
+          padding: 10px;
+          justify-content: flex-start;
+          transition: 0.4s;
+         
+          
+
+          i{
+            padding: 10px 25px 10px 10px;
+            width: 20%;
+            border-radius: 50%;
+           
+          }
+        }
+        .dark-mode i:hover{
+          background-color: #1871CA;
+        }
+        
+        .search{
+          color: white;
+          width: 40%;
+          padding: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 25px;
+          i{
+            width: 40px;
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 50%;
+          }
+          input{
+            width: 0;
+            transition: 0.4s;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid white;
+            outline: none;
+            font-size: 15px;
+            color: white;
+            padding: 0;
+            
+          }
+        }
+        .search:hover input{
+            width: 140px;
+            padding: 0 10px 0 10px;
+          }
+          ::placeholder{
+            color: white;
+            font-size: 15px;
+          }
+      }
+      .btn{
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+        width: 10%;
+        transition: 0.4s;
+      
+        button{
+          background-color: transparent;
+          border: none;
+          width: fit-content;
+          padding: 10px;
+          color: white;
+        }
+        i{
+          padding: 18px 10px 10px 0;
+          border-radius: 50%;
+          display: flex;
+        }
+        
+      }
+      .btn:hover{
+        background-color: #1871CA;
+      }
+     
+
+    
+  }
+ 
+
+  //main
+  main{
+    margin-top: 120px;
+    width: 97%;
+   
+    .bg-image{
+      border-radius: 5px;
+      margin: 10px 40px 40px 20px;
+      width: 100%;
+      height: 600px;
+      display: block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(/src/img/zIYROrkHJPYB3VTiW1L9QVgaQO.jpg);
+      background-color: rgba(0, 0, 0, 0.575);
+      background-blend-mode: darken;
+      overflow: hidden;
+}
+      .content {
+        width: 40%;
+        padding-left: 20px;
+        margin-top: 400px;
+        
+       
+        h3{
+          color: white;
+          font-size: 35px;
+          
+        }
+        p{
+          color: white;
+          margin: 0px;
+          font-family: Roboto, Helvetica, Arial, sans-serif;
+          font-weight: 400;
+          font-size: 0.875rem;
+          line-height: 1.43;
+          letter-spacing: 0.01071em;
+        }
+        }
+     } 
+     .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      .movies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .movie {
+          width: 240px;
+          margin: 10px;
+          position: relative;
+        }
+        .movie__cover-inner {
+          position: relative;
+          height: 360px;
+          .movie__cover {
+            max-width: 100%;
+            height: 100%;
+          }
+          .movie__cover--darkened {
+            background-color: #000000;
+            opacity: 0.1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+          .movie__cover--darkened:hover {
+            background-color: grey;
+            cursor: pointer;
+          }
+        }
+      }
+      .movie__info {
+        padding: 10px 0px;
+        
+        .movie__title {
+          color: black;
+          margin: 0px;
+          font-family: Roboto, Helvetica, Arial, sans-serif;
+          font-weight: 400;
+          font-size: 1.5rem;
+          line-height: 1.334;
+          letter-spacing: 0em;
+          text-align: center;
+        }
+        
+      }
+    }
+    }
+  
+ 
+
